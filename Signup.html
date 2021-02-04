@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proximus</title>
+        <link rel="shortcut icon" href="logo1.ico" />
+        <script type="text/javascript" src="JsProject.js"></script>
+        <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: white;
+  color: white;
+}
+h1,h2,h3,h4 {
+  color: #fff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+p {
+  margin: 0.5rem 0;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.wrapper-top {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+}
+.wrapper-top a {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+}
+#ap{
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  transform: translate(-80%, -40%);
+  color: black;
+}
+
+#a1 {
+  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%, -50%);
+  margin-left: 0;
+}
+.login{
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  width: 400px;
+  height: 500px;
+  padding: 60px 68px 40px;
+}
+.login__title{
+  margin-bottom: 20px;
+   font-size: 2.2rem;
+   font-weight: 600;
+   color: #fff;
+}
+.login__group {
+   position: relative;
+   z-index: 2;
+   display: flex;
+}
+.login__group__label {
+   position: absolute;
+   z-index: 150;
+   color: #b3b3b3;
+   font-size: 1rem;
+   top: 26px;
+   left: 18px;
+   transition: all 300ms ease-in;
+}
+.login__group__input {
+   width: 18rem;
+   position: relative;
+   z-index: 100;
+   background: #333;
+   margin-bottom: 20px;
+   border-radius: 4px;
+   border: none;
+   opacity: 1;
+   font-size: 1rem;
+   color: #fff;
+   line-height: 50px;
+   padding: 10px 18px 0;
+}
+.login__sign-up {
+   margin: 0px 0 12px;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   padding-right:5.9rem;
+   padding-left: 5.9rem;
+   color: #fff;
+   background: #1a9fb0;
+   font-size: 0.9rem;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+.login__sign-up:hover{
+  opacity: 0.7;
+}
+.login__secondary-cta {
+   position: relative;
+   z-index: 100;
+   display: flex;
+   justify-content: all;
+}
+.login__secondary-cta__text {
+   opacity: 1;
+   font-size: 0.9rem;
+   color: #b3b3b3;
+   text-decoration: none;
+}
+ ::placeholder {
+   font-size: 0.7rem;
+}
+.btn{
+  display: inline-block;
+  background: #1a9fb0;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+        </style>
+    </head>
+    <body>
+        <header class="wrapper">
+      <div class="wrapper-top">
+        <a href="jsProject.html"id="a1"><img src="logo.png" alt="Proximus" /></a>
+        <p id="ap">Have an Account Already?</p>
+        <a href="Signin.html" class="btn btn-rounded">Sign In</a>
+            </div>
+            <hr>
+            <div class="login">
+            <h1 class="login__title">Sign Up</h1>
+            <span id="errorE" style="color: #e50914;padding-bottom: 10px;"></span>
+            <div class="login__group"><input autocomplete="off" title="Email Address" id="e" onclick="label01()" onblur="label1()" class="login__group__input" type="Email" required="true" /><label id="l1" class="login__group__label">Email address</label>
+            </div>
+            <div class="login__group"><input title="Should contain atleast 1 Uppercaseletter, 1 Special Character and a minimum length of 8 characters." id="pass" onclick="label02()" onblur="label2()" class="login__group__input" type="password" required="true" /><label id="l2" class="login__group__label">Password</label></div><div class="login__group"><input title="Match the password entered above." id="cpass" onclick="label03()" onblur="label3()" class="login__group__input" type="password" required="true" /><label id="l3" class="login__group__label">Confirm Password</label></div>
+            <span id="errorP" style="color:#e50914;"></span><br><span id="error" style="padding-bottom: 10px;"></span><button class="login__sign-up" onclick="check()" type="submit">Continue</button>
+            <div class="login__secondary-cta"><input value="1" type="checkbox" name="q"/><label for="q" style="margin-left: 5px;"class="login__secondary-cta__text" href="#"> Remember me</label></div>
+        </div>
+    </header>
+    </body>
+</html>

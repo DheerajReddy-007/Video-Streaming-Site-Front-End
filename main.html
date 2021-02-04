@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proximus</title>
+	<link rel="shortcut icon" href="logo1.ico" />
+	<style>
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  color: #F3F3F3;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  padding-top: 60px;  
+}
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  top: 0;
+  display: inline;  
+  background-color: #141414;
+  width: 100%;
+  margin-bottom: 0px;  
+}
+ul{
+  display: inline;
+}
+#logo {
+	display: inline;
+  object-fit: cover;
+  width: 100px;
+  max-height: 100%;
+  padding-left: 30px;
+  padding-top: 0px;
+  height: 35px;
+  color: #E50914;  
+  margin: 0; 
+  padding: 0; 
+}
+.main-nav {
+  grid-area: mn;
+  padding: 0 30px 0 20px;
+}
+
+.main-nav a {
+  color: #F3F3F3;
+  text-decoration: none;
+  margin: 5px;  
+}
+
+.main-nav a:hover {
+  color: black;
+  background-color:#1a9fb0;
+}
+.main-container {
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.box {
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.box a {
+  transition: transform .3s;
+  display: inline-block;
+  max-height: 122.55px;
+  max-width: 217.9px;
+  padding: 10px;  
+  background-color: white;
+}
+.box::-webkit-scrollbar {
+    display: none;
+}
+.box a:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.3);
+  -webkit-transform: scale(1.3);  
+  transform: scale(1.3);
+}
+
+.box img {
+  border-radius: 2px;
+}
+ .search {
+	 right: 15px;
+	 top: 30px;
+	 position: absolute;
+	 display: inline-block;
+}
+ .input__ {
+	 width: 240px;
+	 height: 34px;
+	 background-color: #000;
+	 box-shadow: none;
+	 color: #fff;
+	 border: 1px solid transparent;
+	 outline: none;
+	 padding-left: 35px;
+	 font-size: 16px;
+	 transition: 0.3s ease all;
+}
+ .img__ {
+	 width: 18px;
+	 left: 8px;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 position: absolute;
+}
+
+	</style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>    
+      <nav class="main-nav">
+      	<a id="logo" href="main.html"><img src="logo.png" alt="Proximus"></a>          
+        <a href="#home">Home</a>
+        <a href="#tvShows">TV Shows</a>
+        <a href="#movies">Movies</a>    
+      </nav>
+      <div class="search">
+  <input class="input__"  type="text" placeholder="Titles, genres">
+  <img class="img__" src="https://static.vecteezy.com/system/resources/previews/000/442/657/non_2x/vector-search-icon.jpg" alt="">
+</div>
+    
+    </header>
+    <section class="main-container" >
+      <div class="location" id="home">
+      <h1 id="myList">Trending Now</h1>
+      <div class="box">
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>                  
+      </div>
+    </section> 
+    <section class="main-container" > 
+      <h1 id="tvShows">TV Shows</h1>
+      <div class="box">
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>
+        <a href="#"><img src="blank.jpg" alt=""></a>             
+      </div>
+    </section> 
+    <section class="main-container" >
+      <h1 id="movies">Movies</h1>
+      <div class="box">
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>
+        <a href=""><img src="blank.jpg" alt=""></a>                 
+      </div>
+      <div style="padding-bottom: 50px;"></div>
+  </section>
+ </div>
+</body>
+</html>
